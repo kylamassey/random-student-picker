@@ -12,7 +12,7 @@ body {
   height: 100vh;
 
   font-family: 'Abril Fatface', cursive;
-  background-color: lightblue;
+  background-color: #ccffff;
   text-align: center;
 }
 
@@ -23,8 +23,15 @@ button {
 
 img {
   max-width: 60%;
+  max-height: 20%;
 }
 
 ul {
   list-style-type: none;
+}
+
+div {
+  margin-left: auto;
+  margin-right: auto;
+
 }
