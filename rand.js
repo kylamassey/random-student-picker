@@ -41,8 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
   pickButton = document.getElementById('pickButton');
   choice = document.getElementById('choice');
   aList = document.getElementById('aList');
+  newButton = document.getElementById('newButton');
 
   pickButton.addEventListener('click', pickOnClick );
+  newButton = addEventListener('click', newButton2);
   aList.addEventListener('click', aListOnClick );
 
   // build the attendance list
@@ -75,6 +77,6 @@ var aListOnClick = function (event) { /* edit of aList on dom */
   }
 }
 
-
-// originally was trying to use slice as a method to create a new array that would hold names removed 
-// from the original student list iteration. 
+var newButton2 = function (event){
+  alert("just chilling dude!")
+}
