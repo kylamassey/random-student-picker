@@ -19,6 +19,8 @@ body {
 button {
   font-size: 24px;
   font-family: monospace;
+  background-color: black;
+  color: white;
 }
 
 img {
