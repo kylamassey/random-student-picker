@@ -28,7 +28,8 @@ var colors = [
   'orange',
   'fuchsia', 0,
   'lightblue', 0,
-  'black'
+  'black',
+  'palegoldenrod'
 ];
 var cur = 0;
 
@@ -58,12 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
 var pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
   var rand = students.splice([Math.floor(Math.random() * students.length)],1); /* splice instead of slice to MODIFY original array */
+    // console.log(rand);
   var x = window.setInterval(() => { /* duration to adjust interval of colors onClick */ 
-    if (colors[cur] === undefined) { /* loop for color selection */
+    if (colors[cur] === 'palegoldenrod') { /* loop for color selection */
       window.clearInterval(x);
+      body.style.backgroundColor = colors[cur]
       cur = 0;
-      choice.innerText = rand;
-      return;
+      choice.innerText = rand[0].toUpperCase(); /* uppercase for the output of rand */
+      return rand;
     } 
     if (colors[cur]) header.style.color = colors[cur];
     if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];

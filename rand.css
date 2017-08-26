@@ -24,9 +24,15 @@ button {
   color: white;
 }
 
-img {
+#thedude {
   max-width: 60%;
   max-height: 20%;
+  border: 25px,25px, 20px, 25px black;
+  border-radius: 10px;
+}
+
+#wrapper {
+  border-radius: 10px;
 }
 
 ul {
