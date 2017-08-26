@@ -55,9 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 var pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
-  var rand = students.splice([Math.floor(Math.random() * students.length)],1); /* splice is a b*#($), but it gets it done */
-  var x = window.setInterval(() => {
-    if (colors[cur] === undefined) {
+  var rand = students.splice([Math.floor(Math.random() * students.length)],1); /* splice instead of slice to MODIFY original array */
+  var x = window.setInterval(() => { /* duration to adjust interval of colors onClick */ 
+    if (colors[cur] === undefined) { /* loop for color selection */
       window.clearInterval(x);
       cur = 0;
       choice.innerText = rand;
@@ -69,8 +69,12 @@ var pickOnClick = function (event) {
   }, 200);
 }
 
-var aListOnClick = function (event) {
+var aListOnClick = function (event) { /* edit of aList on dom */
   if (event.target.tagName === 'LI') {
     event.target.style.textDecoration = 'line-through';
   }
 }
+
+
+// originally was trying to use slice as a method to create a new array that would hold names removed 
+// from the original student list iteration. 
