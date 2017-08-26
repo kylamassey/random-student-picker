@@ -28,6 +28,7 @@ img {
 
 ul {
   list-style-type: none; /* changed the styling of unordered list */
+  background-color: lightblue;
 }
 
 div {
