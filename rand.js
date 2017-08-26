@@ -3,6 +3,7 @@ var header;
 var body;
 var choice;
 var aList;
+var dStudents; /* attempting to create an array of selected students*/
 
 var students = [
   "Kevin",
