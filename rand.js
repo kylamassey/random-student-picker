@@ -51,12 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
     li.innerText = students[i];
     aList.append(li);
   }
-
-  for (let i=0; i<students.length; i++) {
-    let li = document.createElemnet('li');
-    li.innerText = Students[i];
-
-  }
 });
 
 var pickOnClick = function (event) {
