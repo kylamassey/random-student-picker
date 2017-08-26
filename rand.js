@@ -3,7 +3,6 @@ var header;
 var body;
 var choice;
 var aList;
-var dStudents; /* attempting to create an array of selected students*/
 
 var students = [
   "Kevin",
@@ -33,6 +32,7 @@ var colors = [
 ];
 var cur = 0;
 
+
 document.addEventListener('DOMContentLoaded', () => {
   console.log('hello rand.js');
 
@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
   pickButton = document.getElementById('pickButton');
   choice = document.getElementById('choice');
   aList = document.getElementById('aList');
-  dStudents = document.getElementById('dStudents'); /* adding an actual list of duplicated students to the dom below the original list of studnets */
 
   pickButton.addEventListener('click', pickOnClick );
   aList.addEventListener('click', aListOnClick );
@@ -52,18 +51,24 @@ document.addEventListener('DOMContentLoaded', () => {
     li.innerText = students[i];
     aList.append(li);
   }
+
+  for (let i=0; i<students.length; i++) {
+    let li = document.createElemnet('li');
+    li.innerText = Students[i];
+
+  }
 });
 
 var pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
-  var rand = students[Math.floor(Math.random() * students.length)];
+  var rand = students.splice([Math.floor(Math.random() * students.length)],1); /* splice is a b*#($), but it gets it done */
   var x = window.setInterval(() => {
     if (colors[cur] === undefined) {
       window.clearInterval(x);
       cur = 0;
       choice.innerText = rand;
       return;
-    }
+    } 
     if (colors[cur]) header.style.color = colors[cur];
     if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
     cur += 1;
