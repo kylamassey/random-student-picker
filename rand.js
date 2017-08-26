@@ -80,14 +80,14 @@ var pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
   var rand = students.splice([Math.floor(Math.random() * students.length - 1)],1); /* splice instead of slice to MODIFY original array */
     // console.log(rand);
-  var randTitle = title.splice([Math.floor(Math.random() * title.length - 1)],1);
+  var randTitle = title.splice([Math.floor(Math.random() * title.length - 1)],1); /* created titles to sort through random */
     // console.log(randTitle);
   var x = window.setInterval(() => { /* duration to adjust interval of colors onClick */ 
     if (colors[cur] === 'palegoldenrod') { /* loop for color selection */
       window.clearInterval(x);
       body.style.backgroundColor = colors[cur]
       cur = 0;
-      choice.innerText = rand[0].toUpperCase() + ' ' + randTitle[0].toUpperCase(); /* uppercase for the output of rand */
+      choice.innerText = rand[0].toUpperCase() + ' ' + randTitle[0].toUpperCase(); /* uppercase for the output of rand, adding randTitle to output picker button */
     
     } 
     if (colors[cur]) header.style.color = colors[cur];
