@@ -24,6 +24,11 @@ button {
   color: white;
 }
 
+#newButton {
+  background-color: red;
+
+}
+
 #thedude {
   max-width: 60%;
   max-height: 20%;
