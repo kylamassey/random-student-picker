@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   newButton = document.getElementById('newButton');
 
   pickButton.addEventListener('click', pickOnClick );
-  newButton = addEventListener('click', newButton2);
+  newButton.addEventListener('click', newButton2);
   aList.addEventListener('click', aListOnClick );
 
   // build the attendance list
@@ -80,3 +80,4 @@ var aListOnClick = function (event) { /* edit of aList on dom */
 var newButton2 = function (event){
   alert("just chilling dude!")
 }
+
