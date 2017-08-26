@@ -23,6 +23,25 @@ var students = [
   "Krystal"
 ];
 
+var title = [
+  "the brave",
+  "the visionary",
+  "the destroyer of worlds",
+  "the lover of walruses",
+  "the poker of facebook",
+  "the forgetter of names",
+  "the lunch stealer",
+  "the tearjerker",
+  "the helping hand",
+  "the slide writer",
+  "the homework helper",
+  "the sorcerer of syntax",
+  "the watcher of paint",
+  "the sneaky snacker",
+  "the cutter of lines",
+  "the coffee culprit"
+]
+
 var colors = [
   'hotpink',
   'orange',
@@ -54,19 +73,22 @@ document.addEventListener('DOMContentLoaded', () => {
     li.innerText = students[i];
     aList.append(li);
   }
+  
 });
 
 var pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
-  var rand = students.splice([Math.floor(Math.random() * students.length)],1); /* splice instead of slice to MODIFY original array */
+  var rand = students.splice([Math.floor(Math.random() * students.length - 1)],1); /* splice instead of slice to MODIFY original array */
     // console.log(rand);
+  var randTitle = title.splice([Math.floor(Math.random() * title.length - 1)],1);
+    // console.log(randTitle);
   var x = window.setInterval(() => { /* duration to adjust interval of colors onClick */ 
     if (colors[cur] === 'palegoldenrod') { /* loop for color selection */
       window.clearInterval(x);
       body.style.backgroundColor = colors[cur]
       cur = 0;
-      choice.innerText = rand[0].toUpperCase(); /* uppercase for the output of rand */
-      return rand;
+      choice.innerText = rand[0].toUpperCase() + ' ' + randTitle[0].toUpperCase(); /* uppercase for the output of rand */
+    
     } 
     if (colors[cur]) header.style.color = colors[cur];
     if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
@@ -83,4 +105,5 @@ var aListOnClick = function (event) { /* edit of aList on dom */
 var newButton2 = function (event){
   alert("just chilling dude!")
 }
+
 
