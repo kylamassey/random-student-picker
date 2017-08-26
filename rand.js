@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   pickButton = document.getElementById('pickButton');
   choice = document.getElementById('choice');
   aList = document.getElementById('aList');
+  dStudents = document.getElementById('dStudents'); /* adding an actual list of duplicated students to the dom below the original list of studnets */
 
   pickButton.addEventListener('click', pickOnClick );
   aList.addEventListener('click', aListOnClick );
